@@ -1,5 +1,6 @@
 // Heap
-// Maintain a min heap of (lCost - rCost) and poll the min when there is no left parenthesis to match (balance < 0)
+// Maintain a min heap of cost = (lCost - rCost)
+// Poll the min when no left parenthesis can match the current right parenthesis
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
