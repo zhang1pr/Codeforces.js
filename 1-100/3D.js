@@ -1,6 +1,7 @@
 // Heap
-// Maintain a min heap of cost = (lCost - rCost)
-// Poll the min when no left parenthesis can match the current right parenthesis
+// Take '?' as ')'
+// Maintain a min heap of lCost - rCost turning ')' into '(' 
+// Poll the min when no '(' can match the current ')' and turn '(' into ')'
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
