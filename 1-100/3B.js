@@ -1,6 +1,6 @@
 // Two Pointers
 // 1 pointer on sorted kayak and the other on sorted catamaran
-// Compare 2 kayaks and 1 catamaran at the same time
+// Compare 2 kayaks and 1 catamaran and take the larger side
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
