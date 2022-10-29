@@ -1,6 +1,6 @@
 // Heap
 // Take '?' as ')'
-// Maintain a min heap of lCost - rCost turning ')' into '(' 
+// Keep a min heap of lCost - rCost turning ')' into '(' 
 // Poll the min when no '(' can match the current ')' and turn '(' into ')'
 
 const fs = require('fs');
