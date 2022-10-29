@@ -12,8 +12,8 @@ const readword = () => input[count++].split(' ');
 let [N,A,B] = readnum();
 let arr = readnum();
 
-let [res, str] = solve(N,A,B,arr);
-console.log(res);
+let [hits, str] = solve(N,A,B,arr);
+console.log(hits);
 console.log(str);   
 
 function solve(N,A,B,arr) {
