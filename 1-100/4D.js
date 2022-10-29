@@ -1,6 +1,6 @@
 // Binary Search
 // Sort the envelopes in increasing W and decreasing H
-// Maintain piles of smallest H for length of increasing subsequence
+// Keep piles of smallest H for length of increasing subsequence
 // Binary search and update the first H bigger than or equal to current H
 
 const fs = require('fs');
