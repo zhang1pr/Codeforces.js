@@ -1,7 +1,7 @@
 // Mono Stack
 // Let a max hill be the first and last in the circle and rearrange the middle hills
 // Start with N - 1 neighbour pairs to the left
-// Maintain a min mono stack and count of contiguous hills to the left
+// Keep a min mono stack and count of contiguous hills to the left
 // Add the count for pairs on the left (not neighbours) when current hill is larger than previous
 // Add the count for pairs on the right to the last hill after all hills are visited
 
