@@ -11,9 +11,8 @@ const readword = () => input[count++].split(' ');
 
 let [N,V] = readnum();
 let arr = [];
-for (let i = 1; i <= N; i++) {
+for (let i = 1; i <= N; i++)
   arr.push(readnum());
-}
 
 let [capacity, vehicle] = solve(arr, V);
 console.log(capacity);
