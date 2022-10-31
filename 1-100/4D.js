@@ -12,9 +12,8 @@ const readword = () => input[count++].split(' ');
 
 let [N,W,H] = readnum();
 let arr = [];
-for (let i = 1; i <= N; i++) {
+for (let i = 1; i <= N; i++)
   arr.push(readnum());
-}
 
 let [len, indices] = solve(N, W, H, arr);
 console.log(len);
