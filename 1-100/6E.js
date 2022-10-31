@@ -47,3 +47,6 @@ function solve(N,K,arr) {
  
   return [max+' '+period.length, ...period];
 }
+
+// time:  O(n)
+// space: O(n)
