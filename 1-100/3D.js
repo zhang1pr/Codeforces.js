@@ -25,25 +25,25 @@ if (cost != -1)
   console.log(sequence);
 
 function solve(str, arr) {
-  let res = 0, parenArr = [...str], balance = 0, qCnt = 0, h = new Heap();
+  let res = 0, arr = [...str], balance = 0, qCnt = 0, h = new Heap();
   
-  for (let i = 0; i < parenArr.length; i++) {
-    let ch = parenArr[i];
+  for (let i = 0; i < arr.length; i++) {
+    let ch = arr[i];
  
     if (ch == '?') {
-			parenArr[i] = ')';
+			arr[i] = ')';
       let [lCost, rCost] = arr[qCnt];
       qCnt++;
 			res += rCost;
       h.add([lCost - rCost, i]);
 		}
 
-		if (balance == 0 && parenArr[i] == ')') {
+		if (balance == 0 && arr[i] == ')') {
 			if (h.isEmpty()) 
         return [-1];
 
 			let [cost, idx] = h.poll();
-			parenArr[idx] = '(';
+			arr[idx] = '(';
 			balance += 2;
 			res += cost;
 		}
@@ -54,7 +54,7 @@ function solve(str, arr) {
   if (balance != 0) 
     return [-1];
 
-  return [res, parenArr.join('')];
+  return [res, arr.join('')];
 }
 
 // time:  O(nlog(n))
