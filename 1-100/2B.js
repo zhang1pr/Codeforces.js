@@ -10,9 +10,8 @@ const readword = () => input[count++].split(' ');
 
 let [N] = readnum();
 let arr = [];
-for (let i = 1; i <= N; i++) {
+for (let i = 1; i <= N; i++)
   arr.push(readnum());
-}
 
 let [num, path] = solve(N, arr);
 console.log(num);
