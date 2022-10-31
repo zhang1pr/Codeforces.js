@@ -67,3 +67,6 @@ function solve(N,A,B,arr) {
 
   return [dp[N][0][0], res.reverse().join(' ')];
 }
+
+// time:  O(n * maxHP^3)
+// space: O(n * maxHP^2)
