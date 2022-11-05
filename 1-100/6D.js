@@ -21,8 +21,10 @@ function solve(N,A,B,arr) {
     arr[i]++;
 
 	let maxHP = Math.max(...arr);
-	let dp = [...Array(N+1)].map(_ =>
-		[...Array(maxHP+1)].map(_ => Array(maxHP+1).fill(Infinity)) 
+	let dp = [...Array(N+1)].map(
+		() => [...Array(maxHP+1)].map(
+			() => Array(maxHP+1).fill(Infinity)
+		) 
   );
 
 	let pre = dp.map(a=>a.map(b=>b.slice()));
