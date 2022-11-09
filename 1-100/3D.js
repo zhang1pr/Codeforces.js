@@ -31,23 +31,23 @@ function solve(str, arr) {
     let ch = arr[i];
  
     if (ch == '?') {
-			arr[i] = ')';
+      arr[i] = ')';
       let [lCost, rCost] = arr[qCnt];
       qCnt++;
-			res += rCost;
+      res += rCost;
       h.add([lCost - rCost, i]);
-		}
+    }
 
-		if (balance == 0 && arr[i] == ')') {
-			if (h.isEmpty()) 
+    if (balance == 0 && arr[i] == ')') {
+      if (h.isEmpty()) 
         return [-1];
 
-			let [cost, idx] = h.poll();
-			arr[idx] = '(';
-			balance += 2;
-			res += cost;
-		}
-		
+      let [cost, idx] = h.poll();
+      arr[idx] = '(';
+      balance += 2;
+      res += cost;
+    }
+    
     balance += ch == '(' ? 1 : -1;
   }
 
