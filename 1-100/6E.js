@@ -29,10 +29,10 @@ function solve(N,K,arr) {
       maxQueue.dequeue();
       
       left++;
-		}
+    }
 
     minQueue.enqueue(arr[right]);
-		maxQueue.enqueue(arr[right]);
+    maxQueue.enqueue(arr[right]);
     
     let len = right - left + 1;
     let indices = (left+1)+' '+(right+1);
