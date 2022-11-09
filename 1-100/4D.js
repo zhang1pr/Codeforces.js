@@ -20,8 +20,23 @@ console.log(len);
 if (len > 0) 
   console.log(indices);
  
+function bisectLeft(x, piles, len) {
+  let l = 1, r = len;
+
+  while (l < r) {
+    let mid = Math.floor((l + r) / 2);
+    
+    if (piles[mid] >= x)
+      r = mid;
+    else 
+      l = mid + 1;
+  }
+  
+  return l;
+}
+
 function solve(N, W, H, arr) {
-  let pile = Array(N + 1).fill(0);
+  let piles = Array(N + 1).fill(0);
   let par = Array(N).fill(-1);
   let idx = Array(N).fill(-1); 
   let len = 1;
@@ -33,35 +48,20 @@ function solve(N, W, H, arr) {
   if (arr.length == 0)
     return [0];
 
-  function bisectLeft(x) {
-    let l = 1, r = len;
-
-    while (l < r) {
-      let mid = Math.floor((l + r) / 2);
-      
-      if (pile[mid] >= x)
-        r = mid;
-      else 
-        l = mid + 1;
-    }
-    
-    return l;
-  }
-
-  pile[len] = arr[0][1]; 
+  piles[len] = arr[0][1]; 
   idx[len] = 0; 
   
   for (let i = 1; i < arr.length; i++) {
     let pos;
 
-    if (pile[len] < arr[i][1]) {
+    if (piles[len] < arr[i][1]) {
       len++;
       pos = len;
     } else {
-      pos = bisectLeft(arr[i][1]);
+      pos = bisectLeft(arr[i][1], piles, len);
     }
 
-    pile[pos] = arr[i][1];
+    piles[pos] = arr[i][1];
     idx[pos] = i;
 
     par[i] = idx[pos-1];
