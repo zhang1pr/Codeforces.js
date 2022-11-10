@@ -35,7 +35,8 @@ function solve(N,A,B,arr) {
   for (let i = 2; i < N; i++) {
     for (let j = 0; j <= arr[i - 2]; j++) {
       for (let k = 0; k <= arr[i - 1]; k++) {
-        if (dp[i][j][k] == Infinity) continue;
+        if (dp[i][j][k] == Infinity) 
+          continue;
         
         let min = Math.ceil(j / B);
         let max = Math.max(min, Math.ceil(k / A), Math.ceil(arr[i] / B));
