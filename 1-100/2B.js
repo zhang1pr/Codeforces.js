@@ -1,5 +1,5 @@
 // 2D DP
-// DP[i][j]: the min number of factor (2 or 5) possible on a path from DP[0][0] to DP[i][j]
+// DP[i][j]: the min number of factor (2 or 5) on a path from matrix[0][0] to matrix[i][j]
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
