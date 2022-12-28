@@ -1,4 +1,4 @@
-// BFS
+// BFS, Heap
 // Use BFS to Detect any cycle and check if the graph is already a cycle
 // If no cycle is found, use BFS to find the component end vertices
 // Keep a min heap of vertex pairs and connect first min with second min
