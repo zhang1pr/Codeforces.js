@@ -1,7 +1,7 @@
 // Heap
 // Take '?' as ')'
-// Keep a min heap of lCost - rCost turning ')' into '(' 
-// Poll the min when no '(' can match the current ')' and turn '(' into ')'
+// Keep a min heap of lCost - rCost as the upcoming cost changing ')' to '(' 
+// Poll the min from heap when no '(' can match the current ')' and change ')' to '('
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
