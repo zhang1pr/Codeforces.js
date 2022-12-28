@@ -1,5 +1,5 @@
 // Two Pointers
-// 1 pointer on sorted kayak and the other on sorted catamaran
+// Keep 1 pointer on sorted kayak and the other on sorted catamaran
 // Compare 2 kayaks and 1 catamaran and take the larger side
 
 const fs = require('fs');
