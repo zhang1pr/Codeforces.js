@@ -1,6 +1,6 @@
 // Mono Queue, Sliding Window
 // Keep a sliding window of books, a max queue and a min queue
-// Add a book on the right and keep removing books on the left until max - min <= K
+// Enqueue a book and keep dequeueing until max - min <= K
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
