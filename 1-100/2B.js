@@ -1,5 +1,6 @@
 // 2D DP
-// DP[i][j]: the min number of factor (2 or 5) on a path from matrix[0][0] to matrix[i][j]
+// DP[i][j]: the min number of times that the path product from matrix[0][0] to matrix[i][j] 
+//           can be divided by the factor
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
