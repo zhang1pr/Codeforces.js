@@ -19,7 +19,7 @@ console.log(num);
 console.log(path);
 
 function getFactorCount(num, factor) {
-  let cnt=0;
+  let cnt = 0;
 
   while (num > 0 && num % factor == 0) {
     num /= factor;
@@ -36,32 +36,32 @@ function getDP(k, N, arr) {
       dp[i][j] = getFactorCount(arr[i][j], k);
 
   for (let i = 1; i < N; i++) {
-    dp[i][0] += dp[i-1][0];
-    dp[0][i] += dp[0][i-1];
+    dp[i][0] += dp[i - 1][0];
+    dp[0][i] += dp[0][i - 1];
   }
 
   for (let i = 1; i < N; i++)
     for (let j = 1; j < N; j++)
-      dp[i][j] += Math.min(dp[i-1][j], dp[i][j-1]);
-          
+      dp[i][j] += Math.min(dp[i - 1][j], dp[i][j - 1]);
+
   return dp;
 }
 
-function solve(N, arr) { 
+function solve(N, arr) {
   let [two, five] = [getDP(2, N, arr), getDP(5, N, arr)]
-  let mat = two[N-1][N-1] < five[N-1][N-1] ? two : five;
-  let res = mat[N-1][N-1];
+  let mat = two[N - 1][N - 1] < five[N - 1][N - 1] ? two : five;
+  let res = mat[N - 1][N - 1];
 
   if (res > 1)
     for (let i = 1; i < N; i++)
       for (let j = 1; j < N; j++)
         if (arr[i][j] == 0)
-          return [1, 'D'.repeat(i) + 'R'.repeat(N-1) + 'D'.repeat(N-1-i)];
+          return [1, 'D'.repeat(i) + 'R'.repeat(N - 1) + 'D'.repeat(N - 1 - i)];
 
-  let path = '', i = N-1, j = N-1;
+  let path = '', i = N - 1, j = N - 1;
   while (i + j > 0) {
-    let iLast = i == 0 ? Infinity : mat[i-1][j];
-    let jLast = j == 0 ? Infinity : mat[i][j-1];
+    let iLast = i == 0 ? Infinity : mat[i - 1][j];
+    let jLast = j == 0 ? Infinity : mat[i][j - 1];
 
     if (iLast < jLast) {
       i--;
@@ -71,7 +71,7 @@ function solve(N, arr) {
       path = 'R' + path;
     }
   }
-  
+
   return [res, path];
 }
 
