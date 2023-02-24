@@ -14,35 +14,35 @@ const readword = () => input[count++].split(' ');
 
 let [N] = readnum();
 let arr = readnum();
-console.log(solve(N,arr));
- 
+console.log(solve(N, arr));
+
 function solve(N, arr) {
-  let ans = N-1, max = 0, maxPos;
+  let ans = N - 1, max = 0, maxPos;
   let cnt = [];
   let stack = [];
 
   for (let i = 0; i < N; i++) {
     if (arr[i] > max) {
-      maxPos = i; 
+      maxPos = i;
       max = arr[i];
     }
   }
 
-  let narr = [...arr.slice(maxPos+1), ...arr.slice(0, maxPos)];
-  
-  for (let i = 0; i < N-1; i++) {
-    while (stack.length > 0 && stack[stack.length-1] < narr[i]) {
+  let narr = [...arr.slice(maxPos + 1), ...arr.slice(0, maxPos)];
+
+  for (let i = 0; i < N - 1; i++) {
+    while (stack.length > 0 && stack[stack.length - 1] < narr[i]) {
       ans += cnt.pop();
       stack.pop();
     }
 
-    if (stack.length == 0 || stack[stack.length-1] != narr[i]) {
+    if (stack.length == 0 || stack[stack.length - 1] != narr[i]) {
       stack.push(narr[i]);
       cnt.push(0);
     }
-    
-    ans += cnt[cnt.length-1];
-    cnt[cnt.length-1]++;
+
+    ans += cnt[cnt.length - 1];
+    cnt[cnt.length - 1]++;
   }
 
   while (cnt.length > 1) {
