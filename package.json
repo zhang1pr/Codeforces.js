@@ -1,0 +1,25 @@
+{
+  "name": "codeforces",
+  "version": "1.0.0",
+  "description": "Codeforces good problems in JavaScript (Node.js)",
+  "main": "cf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhang1pr/Codeforces.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhang1pr/Codeforces.js/issues"
+  },
+  "homepage": "https://github.com/zhang1pr/Codeforces.js#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.4"
+  }
+}
