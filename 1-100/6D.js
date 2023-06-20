@@ -1,6 +1,6 @@
 // 3D DP
 // DP[i][j][k]: the number of hits taken to kill 1...i-2 archers
-//              and leave i-1 and i archers with j and k hps left
+//              and also leave i-1 and i archers with j and k HP left
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
