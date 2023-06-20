@@ -14,13 +14,13 @@ let arr = [];
 for (let i = 1; i <= N; i++)
   arr.push(readnum());
 
-let [capacity, vehicle] = solve(arr, V);
+let [capacity, vehicle] = solve(N, arr, V);
 console.log(capacity);
 console.log(vehicle);
 
-function solve(arr, V) {
+function solve(N, arr, V) {
   let kayak = [], catamaran = [], res = [], capacity = 0;
-  for (let i = 0; i < arr.length; i++)
+  for (let i = 0; i < N; i++)
     arr[i].push(i + 1);
 
   for (let item of arr)
