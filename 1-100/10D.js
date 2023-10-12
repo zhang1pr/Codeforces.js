@@ -5,7 +5,6 @@
 
 const fs = require('fs');
 const input = fs.readFileSync(0, 'utf8').trim().split(/[\n\r]+/);
-const log = (...args) => console.log(...args);
 
 let count = 0;
 const readnum = () => input[count++].trim().split(' ').map(a => +a);
