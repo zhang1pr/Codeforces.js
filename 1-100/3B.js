@@ -66,5 +66,5 @@ function solve(N, arr, V) {
   return [capacity, res.join(' ')];
 }
 
-// time:  O(nlog(n))
+// time:  O(n * log(n))
 // space: O(n)
