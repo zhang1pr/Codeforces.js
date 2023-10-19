@@ -76,5 +76,5 @@ function solve(N, W, H, arr) {
   return [len, res.reverse().join(' ')];
 }
 
-// time:  O(nlog(n))
+// time:  O(n * log(n))
 // space: O(n)
