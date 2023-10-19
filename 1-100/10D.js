@@ -50,3 +50,6 @@ function solve(N, A, M, B) {
 
   return maxLength + '\n' + res.reverse().join(' ');
 }
+
+// time:  O(m * n)
+// space: O(max(m, n))
