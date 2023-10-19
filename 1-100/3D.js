@@ -58,5 +58,5 @@ function solve(str, arr) {
   return [res, parenArr.join('')];
 }
 
-// time:  O(nlog(n))
+// time:  O(n * log(n))
 // space: O(n)
