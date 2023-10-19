@@ -110,5 +110,5 @@ function solve(N, M, arr) {
   return ['YES', edges];
 }
 
-// time:  O(nlog(n))
+// time:  O(n * log(n))
 // space: O(n)
