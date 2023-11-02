@@ -78,7 +78,7 @@ function solve(N, M, arr) {
       isCycle = false;
 
   if (isCycle)
-    return ['YES', []]
+    return ['YES', []];
 
   visited = Array(N).fill(0);
   let vertices = [];

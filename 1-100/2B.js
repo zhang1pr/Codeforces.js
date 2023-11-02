@@ -48,7 +48,7 @@ function getDP(k, N, arr) {
 }
 
 function solve(N, arr) {
-  let [two, five] = [getDP(2, N, arr), getDP(5, N, arr)]
+  let [two, five] = [getDP(2, N, arr), getDP(5, N, arr)];
   let mat = two[N - 1][N - 1] < five[N - 1][N - 1] ? two : five;
   let res = mat[N - 1][N - 1];
 

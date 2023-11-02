@@ -2,21 +2,29 @@
   "extends": [
     "eslint:recommended"
   ],
-  //"plugins": [],
-  // "parserOptions": {
-  //"ecmaVersion": 2023
-  //"sourceType": "module",
-  //"ecmaFeatures": {
-  //"jsx": true
-  //}
-  // },
   "env": {
-    "es6": true,
-    //"browser": true,
-    "node": true,
-    "es2020": true
+    "es2023": true,
+    "node": true
   },
   "rules": {
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error"
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "no-multi-spaces": [
+      "error"
+    ],
+    "eol-last": [
+      "error",
+      "never"
+    ]
   }
 }
