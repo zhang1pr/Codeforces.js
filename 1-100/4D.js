@@ -1,5 +1,5 @@
 // Binary Search
-// Sort the envelopes in increasing W and decreasing H
+// Sort envelopes in increasing W and decreasing H
 // Keep piles of min H for length of increasing subsequence
 // Binary search and update the first H ≥ current H
 
