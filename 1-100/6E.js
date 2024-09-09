@@ -1,4 +1,4 @@
-// Mono Queue, Sliding Window
+// Monotonic Queue, Two Pointers
 // Keep a sliding window of books, a max queue and a min queue
 // Enqueue a book and keep dequeueing until max - min <= K
 
@@ -24,15 +24,14 @@ function solve(N, K, arr) {
   let maxQueue = new MaxQueue(), minQueue = new MinQueue();
 
   for (let right = 0; right < arr.length; right++) {
-    while (left < right && (arr[right] - minQueue.peek() > K || maxQueue.peek() - arr[right] > K)) {
-      minQueue.dequeue();
-      maxQueue.dequeue();
-
-      left++;
-    }
-
     minQueue.enqueue(arr[right]);
     maxQueue.enqueue(arr[right]);
+
+    while (maxQueue.peek() - minQueue.peek() > K) {
+      minQueue.dequeue();
+      maxQueue.dequeue();
+      left++;
+    }
 
     let len = right - left + 1;
     let indices = (left + 1) + ' ' + (right + 1);
