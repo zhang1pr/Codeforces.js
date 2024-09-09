@@ -1,4 +1,4 @@
-// Mono Stack
+// Monotonic Stack
 // Let a max hill be the first and last in the circle and rearrange the middle hills
 // Start with N - 1 neighbour pairs to the left
 // Keep a min stack of height and count of contiguous hills to the left
